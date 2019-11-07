@@ -1,7 +1,7 @@
 <div class="site-navbar">
     <!-- Logo -->
-    <a href="index.html" class="site-logo">
-        <img src="img/logo.png" alt="">
+    <a href="{{route('home')}}" class="site-logo">
+        <img src="img/logo.png" alt="проминдустрия логотип">
     </a>
     <div class="header-right">
         <div class="header-info-box">
@@ -9,8 +9,9 @@
                 <img src="img/icons/phone.png" alt="" class="">
             </div>
             <div class="hib-text">
-                <h6>+546 990221 123</h6>
-                <p>contact@industryalinc.com</p>
+                <h6>+7(343)207-73-87</h6>
+                <h6>+7(992)332-22-68</h6>
+                <p>Promindustria2019@mail.ru</p>
             </div>
         </div>
         <div class="header-info-box">
@@ -18,11 +19,10 @@
                 <img src="img/icons/map-marker.png" alt="" class="">
             </div>
             <div class="hib-text">
-                <h6>Main Str, no 23</h6>
-                <p>NY, New York PK 23589</p>
+                <h6>Пер. Дизельный 33, офис 75</h6>
+                <p>Россия, г.Екатеринбург</p>
             </div>
         </div>
-        <button class="search-switch"><i class="fa fa-search"></i></button>
     </div>
     <!-- Menu -->
     <nav class="site-nav-menu">

@@ -169,6 +169,7 @@
 <script src="{{ asset('js/circle-progress.min.js') }}"></script>
 <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('js/font-awesome-kit.js') }}"></script>
 
 </body>
 </html>
