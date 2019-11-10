@@ -9,9 +9,8 @@
                 <img src="img/icons/phone.png" alt="" class="">
             </div>
             <div class="hib-text">
-                <h6>+7(343)207-73-87</h6>
-                <h6>+7(992)332-22-68</h6>
-                <p>Promindustria2019@mail.ru</p>
+                <h6>+7 (343) 207-73-87 | +7 (992) 332-22-68</h6>
+                <p><a href="mailto:promindustria2019@mail.ru">Promindustria2019@mail.ru</a></p>
             </div>
         </div>
         <div class="header-info-box">
@@ -28,8 +27,8 @@
     <nav class="site-nav-menu">
         <ul>
             <li @if($route == 'home') class="active" @endif><a href="{{route('home')}}">Главная</a></li>
-            <li @if($route == 'catalog') class="active" @endif><a href="{{route('catalog')}}">Каталог</a></li>
-            <li @if($route == 'about') class="active" @endif><a href="{{route('about')}}">О нас</a></li>
+            {{--<li @if($route == 'catalog') class="active" @endif><a href="{{route('catalog')}}">Каталог</a></li>--}}
+            {{--<li @if($route == 'about') class="active" @endif><a href="{{route('about')}}">О нас</a></li>--}}
             <li @if($route == 'contact') class="active" @endif><a href="{{route('contact')}}">Контакты</a></li>
         </ul>
     </nav>
