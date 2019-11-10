@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\CallbackUser;
 use App\Mail\CallbackMessage;
+use App\MessageFromCallback;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -49,9 +51,15 @@ class HomeController extends Controller
     public function callback(Request $request)
     {
         $request->validate([
-            'g-recaptcha-response' => ['required' , 'captcha']
+            'g-recaptcha-response' => ['required', 'captcha']
         ]);
 
+        $msg = new MessageFromCallback();
+        $msg->name = $request->name;
+        $msg->email = $request->email;
+        $msg->subject = $request->subject;
+        $msg->message = $request->message;
+        $msg->save();
 
         Mail::to(env('ADMIN_MAIL'))->send(new CallbackMessage($request));
 
