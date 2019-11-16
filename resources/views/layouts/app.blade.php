@@ -144,18 +144,18 @@
             </div>
         </div>
     </div>
-    <div class="footer-buttom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 order-2 order-lg-1 p-0">
-                    <div class="copyright">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                        All rights reserved | This template is made with <i class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i> by <a
-                            href="https://colorlib.com" target="_blank">Colorlib</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-                </div>
+    {{--<div class="footer-buttom">--}}
+        {{--<div class="container">--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-lg-4 order-2 order-lg-1 p-0">--}}
+                    {{--<div class="copyright">--}}
+                        {{--<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->--}}
+                        {{--Copyright &copy;<script>document.write(new Date().getFullYear());</script>--}}
+                        {{--All rights reserved | This template is made with <i class="fa fa-heart-o"--}}
+                                                                            {{--aria-hidden="true"></i> by <a--}}
+                            {{--href="https://colorlib.com" target="_blank">Colorlib</a>--}}
+                        {{--<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>--}}
+                {{--</div>--}}
                 {{--<div class="col-lg-7 order-1 order-lg-2 p-0">--}}
                 {{--<ul class="footer-menu">--}}
                 {{--<li class="active"><a href="index.html">Home</a></li>--}}
@@ -165,9 +165,9 @@
                 {{--<li><a href="contact.html">Contact</a></li>--}}
                 {{--</ul>--}}
                 {{--</div>--}}
-            </div>
-        </div>
-    </div>
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 </footer>
 <!-- Footer section end -->
 
