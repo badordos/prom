@@ -4,32 +4,6 @@
     <!-- Hero section  -->
     <section class="hero-section">
         <div class="hero-slider owl-carousel">
-            {{--<div class="hero-item set-bg" data-setbg="img/hero-slider/1.jpg">--}}
-            {{--<div class="container">--}}
-            {{--<div class="row">--}}
-            {{--<div class="col-xl-8">--}}
-            {{--<h2><span>Производство</span>--}}
-            {{--<span>металлоконструкций</span>--}}
-            {{--</h2>--}}
-            {{--<a href="tel:+79326161120" class="site-btn sb-white mr-4 mb-3"><i class="fas fa-phone"></i> Позвонить</a>--}}
-            {{--<a href="{{route('contact')}}" class="site-btn sb-dark"><i class="far fa-envelope"></i> Оставить заявку</a>--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="hero-item set-bg" data-setbg="img/hero-slider/2.jpg">--}}
-            {{--<div class="container">--}}
-            {{--<div class="row">--}}
-            {{--<div class="col-xl-8">--}}
-            {{--<h2><span>Продажа</span>--}}
-            {{--                                <span>& Energy</span><span>Industry</span>--}}
-            {{--</h2>--}}
-            {{--<a href="tel:+79326161120" class="site-btn sb-white mr-4 mb-3"><i class="fas fa-phone"></i> Позвонить</a>--}}
-            {{--<a href="{{route('contact')}}" class="site-btn sb-dark"><i class="far fa-envelope"></i> Оставить заявку</a>--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</div>--}}
             <div class="hero-item set-bg" data-setbg="img/hero-slider/metas.jpg">
                 <div class="container">
                     <div class="row">
@@ -117,7 +91,7 @@
                                 промышленого и гражданского строительства.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="service-item">
                             <div class="si-head">
                                 <div class="si-icon">
@@ -129,7 +103,7 @@
                                 заказчика</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="service-item">
                             <div class="si-head">
                                 <div class="si-icon">
@@ -141,7 +115,7 @@
                                 кладки.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="service-item">
                             <div class="si-head">
                                 <div class="si-icon">
@@ -153,7 +127,7 @@
                                 здоровья человека.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="service-item">
                             <div class="si-head">
                                 <div class="si-icon">
@@ -162,6 +136,28 @@
                                 <h5>По чертежам заказчика</h5>
                             </div>
                             <p>Мы можем поставить по вашим чертежам закладные детали, лестничные марши.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="si-head">
+                                <div class="si-icon">
+                                    <img src="img/icons/рмп.png" alt="">
+                                </div>
+                                <h5>Рамы РМП</h5>
+                            </div>
+                            <p>Рамы металлические, п-образные. Предназначены для установки дорожных знаков и указателей</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item">
+                            <div class="si-head">
+                                <div class="si-icon">
+                                    <img src="img/icons/гобр.png" alt="">
+                                </div>
+                                <h5>Опоры светофорные</h5>
+                            </div>
+                            <p>Г-образные стальные опоры предзназначенные для установки светофоров и дорожных знаков.</p>
                         </div>
                     </div>
                 </div>
@@ -345,6 +341,52 @@
                 </div>
                 <div class="col-lg-6 p-0">
                     <div class="testimonial-bg set-bg" data-setbg="img/ogr.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="testimonial-bg set-bg" data-setbg="img/rmp.jpg"></div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="testimonial-box">
+                        <div class="testi-box-warp">
+                            <h2>
+                                Рамы РМП
+                            </h2>
+                            <div>
+                                <div class="testimonial">
+                                    <p>Конструкции данного типа предназначены для размещения на их плоскости под прямым углом дорожных знаков, светосигнального оборудования, светофоров, приборов фото и видеофиксации, рекламных конструкций. Прямой угол крепления конструкций обеспечивает хороший обзор всем участникам движения.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="testimonial-box">
+                        <div class="testi-box-warp">
+                            <h2>
+                                Г-образные светофорные опоры
+                            </h2>
+                            <div>
+                                <div class="testimonial">
+                                    <p>Г-образная опора для светофоров дорожных знаков используется для установки различных средств регулирования и организации движения на трассах, автострадах, прилегающей к дороге территории, подъездных путях, а также рядом с пешеходными переходами, которые не оборудованы специальными барьерными ограждениями. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="testimonial-bg set-bg" data-setbg="img/гобр.jpg"></div>
                 </div>
             </div>
         </div>
