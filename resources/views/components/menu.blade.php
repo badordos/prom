@@ -26,10 +26,11 @@
     <!-- Menu -->
     <nav class="site-nav-menu">
         <ul>
-            <li @if($route == 'home') class="active" @endif><a href="{{route('home')}}">Главная</a></li>
-            {{--<li @if($route == 'catalog') class="active" @endif><a href="{{route('catalog')}}">Каталог</a></li>--}}
+            <li @if(isset($route) && $route == 'home') class="active" @endif><a href="{{route('home')}}">Главная</a></li>
+            <li @if($route == 'catalog') class="active" @endif><a href="{{route('catalog')}}">Каталог</a></li>
             {{--<li @if($route == 'about') class="active" @endif><a href="{{route('about')}}">О нас</a></li>--}}
-            <li @if($route == 'contact') class="active" @endif><a href="{{route('contact')}}">Контакты</a></li>
+            <li @if(isset($route) && $route == 'contact') class="active" @endif><a href="{{route('contact')}}">Контакты</a></li>
+            @if(auth()->check() && auth()->user()->admin)<li><a href="{{route('admin.index')}}">Админ</a></li>@endif
         </ul>
     </nav>
 </div>

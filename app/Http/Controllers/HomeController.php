@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\CallbackUser;
 use App\Mail\CallbackMessage;
 use App\MessageFromCallback;
+use App\Product;
+use App\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -33,9 +35,27 @@ class HomeController extends Controller
         return view('index');
     }
 
-    public function catalog()
+    public function catalog(Request $request)
     {
-        return view('catalog');
+        if (isset($request->title)) {
+            $products = Product::query()
+                ->where('title', 'LIKE', "%{$request->title}%")
+                ->orWhere('short_desc', 'LIKE', "%{$request->title}%")
+                ->orWhere('meta', 'LIKE', "%{$request->title}%")
+                ->orderBy('created_at')->paginate(12);
+
+        }else{
+            $products = Product::orderBy('created_at')->paginate(12);
+        }
+
+        if (isset($request->type_id)) {
+            $products->filter(function ($item) use ($request) {
+                return $item->type_id == $request->type_id;
+            });
+        }
+
+        $types = Type::all();
+        return view('catalog', compact('products', 'types'));
     }
 
     public function about()
