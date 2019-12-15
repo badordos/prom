@@ -35,12 +35,12 @@
                 <div class="row">
                     @forelse($products as $product)
                         <div class="card col-3 mr-5 mt-3">
-                            <img class="card-img-top" src="{{$product->getFirstMedia('image')->getUrl()}}" alt="Card image cap">
+                            <img class="card-img-top" src="{{$product->getFirstMedia('image')->getUrl('small')}}" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">{{$product->title}}</h5>
                                 <p class="card-text">{{$product->type->title}}</p>
                                 <p class="card-text">{{$product->short_desc}}</p>
-                                <a href="#}" class="site-btn btn-primary">Подробности</a>
+                                <a href="{{route('product', $product)}}" class="site-btn btn-primary">Подробности</a>
                             </div>
                         </div>
                     @empty

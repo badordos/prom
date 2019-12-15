@@ -41,7 +41,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="shortcut icon"/>
+    <link href="/img/favicon.ico" rel="shortcut icon"/>
 </head>
 <body>
 <!-- Page Preloder -->
@@ -76,7 +76,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6">
                 <div class="footer-widget about-widget">
-                    <img src="img/logo-alt.png" alt="проминдустрия логотип">
+                    <img src="/img/logo-alt.png" alt="проминдустрия логотип">
                     {{--<p>Lorem ipsum dolor sit amet, consec-tetur adipiscing elit. Quisque orci purus, sodales in est--}}
                     {{--quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et--}}
                     {{--commodo interdum. </p>--}}
@@ -119,7 +119,7 @@
                     <h2 class="fw-title">Контакты</h2>
                     <div class="footer-info-box">
                         <div class="fib-icon">
-                            <img src="img/icons/map-marker.png" alt="" class="">
+                            <img src="/img/icons/map-marker.png" alt="" class="">
                         </div>
                         <div class="fib-text">
                             <p>Россия, г.Екатеринбург<br>Пер. Дизельный 33, офис 75</p>
@@ -127,7 +127,7 @@
                     </div>
                     <div class="footer-info-box">
                         <div class="fib-icon">
-                            <img src="img/icons/phone.png" alt="" class="">
+                            <img src="/img/icons/phone.png" alt="" class="">
                         </div>
                         <div class="fib-text">
                             <p>+7 (343) 207-73-87

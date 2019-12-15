@@ -1,12 +1,12 @@
 <div class="site-navbar">
     <!-- Logo -->
     <a href="{{route('home')}}" class="site-logo">
-        <img src="img/logo.png" alt="проминдустрия логотип">
+        <img src="/img/logo.png" alt="проминдустрия логотип">
     </a>
     <div class="header-right">
         <div class="header-info-box">
             <div class="hib-icon">
-                <img src="img/icons/phone.png" alt="" class="">
+                <img src="/img/icons/phone.png" alt="" class="">
             </div>
             <div class="hib-text">
                 <h6>+7 (343) 207-73-87 | +7 (992) 332-22-68</h6>
@@ -15,7 +15,7 @@
         </div>
         <div class="header-info-box">
             <div class="hib-icon">
-                <img src="img/icons/map-marker.png" alt="" class="">
+                <img src="/img/icons/map-marker.png" alt="" class="">
             </div>
             <div class="hib-text">
                 <h6>Пер. Дизельный 33, офис 75</h6>

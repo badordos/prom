@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\CallbackUser;
 use App\Mail\CallbackMessage;
 use App\MessageFromCallback;
 use App\Product;
@@ -56,6 +55,12 @@ class HomeController extends Controller
 
         $types = Type::all();
         return view('catalog', compact('products', 'types'));
+    }
+
+
+    public function show(Product $product){
+
+        return view('product', compact('product'));
     }
 
     public function about()
