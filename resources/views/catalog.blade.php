@@ -35,7 +35,7 @@
                 <div class="row">
                     @forelse($products as $product)
                         <div class="card col-3 mr-5 mt-3">
-                            <img class="card-img-top" src="{{$product->getFirstMedia('image')->getUrl()}}" alt="{{$product->short_desc}}">
+                            <img class="card-img-top img-fluid img-thumbnail" style="width: 350px ; height: 350px" src="{{$product->getFirstMedia('image')->getUrl()}}" alt="{{$product->short_desc}}">
                             <div class="card-body">
                                 <h5 class="card-title">{{$product->title}}</h5>
                                 <p class="card-text">{{$product->type->title}}</p>
@@ -47,6 +47,7 @@
                         <h4>Подходящих под запрос товаров не найдено</h4>
                     @endforelse
                 </div>
+                <br>
                 {{$products->links()}}
             </div>
         </div>
