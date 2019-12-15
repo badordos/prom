@@ -34,12 +34,12 @@ class Product extends Model implements HasMedia
         ];
     }
 
-    public function registerMediaConversions(Media $media = null)
-    {
-        $this->addMediaConversion('small')
-            ->width(320)
-            ->height(240);
-    }
+//    public function registerMediaConversions(Media $media = null)
+//    {
+//        $this->addMediaConversion('small')
+//            ->width(320)
+//            ->height(240);
+//    }
 
     public function type()
     {
