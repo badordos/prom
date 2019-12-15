@@ -73,7 +73,7 @@ class RegisterController extends Controller
     //если админ уже есть не даем никому регистрационной формы
     public function showRegistrationForm()
     {
-        $admin = User::where('is_admin', 1)->first();
+        $admin = User::where('admin', 1)->first();
         if(isset($admin)){
             return redirect('login');
         }
