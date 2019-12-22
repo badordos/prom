@@ -56,7 +56,7 @@ class HomeController extends Controller
 
         $types = Type::all();
         return view('catalog', [
-            'products' => $products->appends(Input::except('page')),,
+            'products' => $products->appends(Input::except('page')),
             'types'    => $types,
         ]);
     }
