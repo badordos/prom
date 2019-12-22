@@ -8,7 +8,9 @@
         <h2>Каталог продукции ООО "ПРОМИНДУСТРИЯ"</h2>
         <hr>
         @if(request('title') || request('type_id'))
-            <h4>Отфильтровано по "{{request('title')}}" @if(($reqType = $types->where('id', request('type_id'))->first()) != null) | "{{$reqType->title}}" @endif</h4>
+            <h4>Отфильтровано по "{{request('title')}}
+                " @if(($reqType = $types->where('id', request('type_id'))->first()) != null) | "{{$reqType->title}}
+                " @endif</h4>
             <hr>
         @endif
         <div class="row">
@@ -24,7 +26,10 @@
                         <select name="type_id" class="form-control" id="type">
                             <option disabled selected>Выбрать тип</option>
                             @foreach($types as $type)
-                                <option value="{{$type->id}}">{{$type->title}}</option>
+                                <option value="{{$type->id}}"
+                                        @if(isset($reqType) && $type->id == $reqType->id) selected @endif>
+                                    {{$type->title}}
+                                </option>
                             @endforeach
                         </select>
                     </div>
@@ -35,7 +40,8 @@
                 <div class="row">
                     @forelse($products as $product)
                         <div class="card col-3 mr-5 mt-3">
-                            <img class="card-img-top img-fluid img-thumbnail" style="width: 350px ; height: 350px" src="{{$product->getFirstMedia('image')->getUrl()}}" alt="{{$product->short_desc}}">
+                            <img class="card-img-top img-fluid img-thumbnail" style="width: 350px ; height: 350px"
+                                 src="{{$product->getFirstMedia('image')->getUrl()}}" alt="{{$product->short_desc}}">
                             <div class="card-body">
                                 <h5 class="card-title">{{$product->title}}</h5>
                                 <p class="card-text">{{$product->type->title}}</p>

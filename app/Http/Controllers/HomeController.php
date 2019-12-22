@@ -42,18 +42,17 @@ class HomeController extends Controller
                 ->where('title', 'LIKE', "%{$request->title}%")
                 ->orWhere('short_desc', 'LIKE', "%{$request->title}%")
                 ->orWhere('meta', 'LIKE', "%{$request->title}%")
-                ->orderBy('created_at')->paginate(12);
+                ->orderBy('created_at');
 
         }else{
-            $products = Product::orderBy('created_at')->paginate(12);
+            $products = Product::orderBy('created_at');
         }
 
         if (isset($request->type_id)) {
-            $products->filter(function ($item) use ($request) {
-                return $item->type_id == $request->type_id;
-            });
+            $products = $products->where('type_id', $request->type_id);
         }
 
+        $products = $products->paginate(12);
         $types = Type::all();
         return view('catalog', [
             'products' => $products->appends(Input::except('page')),
