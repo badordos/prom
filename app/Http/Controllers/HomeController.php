@@ -7,6 +7,7 @@ use App\MessageFromCallback;
 use App\Product;
 use App\Type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
@@ -54,7 +55,10 @@ class HomeController extends Controller
         }
 
         $types = Type::all();
-        return view('catalog', compact('products', 'types'));
+        return view('catalog', [
+            'products' => $products->appends(Input::except('page')),,
+            'types'    => $types,
+        ]);
     }
 
 
