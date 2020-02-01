@@ -21,7 +21,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
         View::share('route', $route = Route::currentRouteName());
     }
 
@@ -32,11 +31,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $title = 'Проминдустрия - производство и продажа металлоконструкций в Екатеринбурге.';
+        return view('index', compact('title'));
     }
 
     public function catalog(Request $request)
     {
+        $title = 'Каталог продукции ООО "ПРОМИНДУСТРИЯ"';
+
         if (isset($request->title)) {
             $products = Product::query()
                 ->where('title', 'LIKE', "%{$request->title}%")
@@ -44,7 +46,7 @@ class HomeController extends Controller
                 ->orWhere('meta', 'LIKE', "%{$request->title}%")
                 ->orderBy('created_at');
 
-        }else{
+        } else {
             $products = Product::orderBy('created_at');
         }
 
@@ -56,14 +58,16 @@ class HomeController extends Controller
         $types = Type::all();
         return view('catalog', [
             'products' => $products->appends(Input::except('page')),
-            'types'    => $types,
+            'types' => $types,
+            'title' => $title,
         ]);
     }
 
 
-    public function show(Product $product){
-
-        return view('product', compact('product'));
+    public function show(Product $product)
+    {
+        $title = $product->title;
+        return view('product', compact('product', 'title'));
     }
 
     public function about()
@@ -73,7 +77,8 @@ class HomeController extends Controller
 
     public function contact()
     {
-        return view('contact');
+        $title = 'Оставить заявку в Проминдустрия Екатеринбург';
+        return view('contact', compact('title'));
     }
 
     public function callback(Request $request)

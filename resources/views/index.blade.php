@@ -210,36 +210,6 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 p-0">
-                    <div class="testimonial-box">
-                        <div class="testi-box-warp">
-                            <h2>
-                                Опоры освещения
-                                <br>
-                                Фундаменты и кронштейны
-                            </h2>
-                            <div>
-                                <div class="testimonial">
-                                    <p>Пpи peшeнии зaдaчи пo нapужнoму ocвeщeнию нe oбoйтиcь бeз ocвeтитeльныx oпop,
-                                        oбecпeчивaющиx уcтaнoвку cвeтильникoв и пpoжeктopoв нa тpeбуeмoй выcoтe.
-                                        Haибoльшee pacпpocтpaнeниe пoлучили мeтaлличecкиe oпopы ocвeщeния. Иx cтoимocть
-                                        и пpeимущecтвa cбaлaнcиpoвaны, a шиpoкий выбop пapaмeтpoв нe oгpaничивaeт
-                                        вoзмoжнocти пpимeнeния.</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 p-0">
-                    <div class="testimonial-bg set-bg" data-setbg="img/ost_main.jpg"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="testimonial-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 p-0">
                     <div class="testimonial-bg set-bg" data-setbg="img/piles.jpg"></div>
                 </div>
                 <div class="col-lg-6 p-0">
@@ -254,6 +224,7 @@
                                         Фундамент на винтовых сваях не требует сложного проектирования, применим к
                                         любому проекту здания, и может быть построен за 2 дня.
                                     </p>
+                                    <a href="{{route('catalog', ['type_id' => 4])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -276,11 +247,7 @@
                                         Токарно-фрезерные работы по металлу востребованы на любом предприятии
                                         машиностроения, производства металлоизделий или по ремонту и обслуживанию
                                         транспорта.</p>
-                                    {{--<img src="img/testimonial-thumb.jpg" alt="" class="testi-thumb">--}}
-                                    {{--<div class="testi-info">--}}
-                                    {{--<h5>Michael Smith</h5>--}}
-                                    {{--<span>CEO Industrial INC</span>--}}
-                                    {{--</div>--}}
+                                    <a href="{{route('catalog', ['type_id' => 9])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -308,6 +275,7 @@
                                         промышленности, сельском хозяйстве. Сетка сварная удобна при крепеже, имеет
                                         низкий удельный вес. Изделия и конструкции с применением сварной сетки доступны
                                         по цене, легки в монтаже, безопасны в пользовании.</p>
+                                    <a href="{{route('catalog', ['type_id' => 5])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -334,6 +302,7 @@
                                         препятствующих пересечению пешеходами дороги в неположенном месте.
                                         Дорожные ограждения барьерного типа — это элемент обеспечения пассивной
                                         безопасности автомобильных дорог.</p>
+                                    <a href="{{route('catalog', ['type_id' => 6])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -359,7 +328,11 @@
                             </h2>
                             <div>
                                 <div class="testimonial">
-                                    <p>Конструкции данного типа предназначены для размещения на их плоскости под прямым углом дорожных знаков, светосигнального оборудования, светофоров, приборов фото и видеофиксации, рекламных конструкций. Прямой угол крепления конструкций обеспечивает хороший обзор всем участникам движения.</p>
+                                    <p>Конструкции данного типа предназначены для размещения на их плоскости под прямым
+                                        углом дорожных знаков, светосигнального оборудования, светофоров, приборов фото
+                                        и видеофиксации, рекламных конструкций. Прямой угол крепления конструкций
+                                        обеспечивает хороший обзор всем участникам движения.</p>
+                                    <a href="{{route('catalog', ['type_id' => 7])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -379,7 +352,11 @@
                             </h2>
                             <div>
                                 <div class="testimonial">
-                                    <p>Г-образная опора для светофоров дорожных знаков используется для установки различных средств регулирования и организации движения на трассах, автострадах, прилегающей к дороге территории, подъездных путях, а также рядом с пешеходными переходами, которые не оборудованы специальными барьерными ограждениями. </p>
+                                    <p>Г-образная опора для светофоров дорожных знаков используется для установки
+                                        различных средств регулирования и организации движения на трассах, автострадах,
+                                        прилегающей к дороге территории, подъездных путях, а также рядом с пешеходными
+                                        переходами, которые не оборудованы специальными барьерными ограждениями. </p>
+                                    <a href="{{route('catalog', ['type_id' => 1])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -388,6 +365,37 @@
                 <div class="col-lg-6 p-0">
                     <div class="testimonial-bg set-bg" data-setbg="img/гобр.jpg"></div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="testimonial-bg set-bg" data-setbg="img/ost_main.jpg"></div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="testimonial-box">
+                        <div class="testi-box-warp">
+                            <h2>
+                                Опоры освещения
+                                <br>
+                                Фундаменты и кронштейны
+                            </h2>
+                            <div>
+                                <div class="testimonial">
+                                    <p>Пpи peшeнии зaдaчи пo нapужнoму ocвeщeнию нe oбoйтиcь бeз ocвeтитeльныx oпop,
+                                        oбecпeчивaющиx уcтaнoвку cвeтильникoв и пpoжeктopoв нa тpeбуeмoй выcoтe.
+                                        Haибoльшee pacпpocтpaнeниe пoлучили мeтaлличecкиe oпopы ocвeщeния. Иx cтoимocть
+                                        и пpeимущecтвa cбaлaнcиpoвaны, a шиpoкий выбop пapaмeтpoв нe oгpaничивaeт
+                                        вoзмoжнocти пpимeнeния.</p>
+                                    <a href="{{route('catalog', ['type_id' => 1])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -406,7 +414,7 @@
             </div>
             <div class="single-brand d-inline-block">
                 <a href="#" class="site-logo">
-                    <img src="img/rmglogo.png" target="_blank" alt="Адванс логотип">
+                    <img src="img/rmglogo.png" target="_blank" alt="РусМетГрупп логотип">
                 </a>
             </div>
         </div>
