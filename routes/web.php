@@ -10,6 +10,7 @@ Route::post('/callback', 'HomeController@callback')->name('callback');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'AdminController@index')->name('admin.index');
+    Route::get('callbacks', 'AdminController@callbacks')->name('callbacks.index');
     Route::resource('products', 'ProductsController');
 
     Route::get('/phpinfo', function () {

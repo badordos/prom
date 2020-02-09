@@ -22,7 +22,7 @@
                     <td>{{$product->title}}</td>
                     <td>
                         <a href="{{route('products.edit', $product)}}" class="badge badge-primary">Редактировать</a>
-                        <form class="d-inline-block" method="post" action="{{route('products.destroy', $product)}}">
+                        <form class="d-inline-block del" method="post" action="{{route('products.destroy', $product)}}">
                             @method('DELETE')
                             @csrf
                             <button type="submit" class="badge badge-danger del">Удалить</button>

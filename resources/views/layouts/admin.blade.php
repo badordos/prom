@@ -67,6 +67,10 @@
                 <span>Продукты</span></a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{route('callbacks.index')}}">
+                <span>Сообщения</span></a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{route('phpinfo')}}">
                 <span>PHP info</span></a>
         </li>
@@ -107,11 +111,8 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="{{asset('js/jquery.min.js')}}"></script>
-<script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="{{asset('js/jquery.easing.min.js')}}"></script>
+<script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
 <!-- Custom scripts for all pages-->
 <script src="{{asset('js/sb-admin.min.js')}}"></script>
