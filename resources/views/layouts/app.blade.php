@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <meta name="yandex-verification" content="6753d4f9aad05e81" />
+    <meta name="yandex-verification" content="b15ffed95c1f2113" />
 
     <title>{{ $title ?? config('app.name', 'Laravel') }}</title>
 
