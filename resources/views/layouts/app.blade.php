@@ -34,7 +34,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    {{--<link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">--}}
     <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
     <link href="{{ asset('css/slicknav.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
@@ -190,7 +190,8 @@
 <script src="{{ asset('js/circle-progress.min.js') }}"></script>
 <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
-<script src="{{ asset('js/font-awesome-kit.js') }}"></script>
+<script src="https://kit.fontawesome.com/b3e3d9863b.js" crossorigin="anonymous"></script>
+
 
 </body>
 </html>

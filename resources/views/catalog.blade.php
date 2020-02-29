@@ -14,7 +14,7 @@
             <hr>
         @endif
         <div class="row">
-            <div class="col-2">
+            <div class="col-lg-2 col-md-6 col-sm-12">
                 <h4>Фильтры</h4>
                 <br>
                 <form method="GET" id="filter" action="{{route('catalog')}}" enctype="multipart/form-data">
@@ -39,9 +39,11 @@
             <div class="col-10">
                 <div class="row">
                     @forelse($products as $product)
-                        <div class="card col-3 mr-5 mt-3">
+                        <div class="card col-lg-3 col-md-4 col-sm-9 mr-5 mt-3">
                             <img class="card-img-top img-fluid img-thumbnail" style="width: 350px ; height: 350px"
-                                 src="{{$product->getFirstMedia('image')->getUrl()}}" alt="{{$product->short_desc}}">
+                                 src="{{$product->getFirstMedia('image')->getUrl()}}"
+                                 alt="{{$product->short_desc}}"
+                                 loading="lazy">
                             <div class="card-body">
                                 <h5 class="card-title">{{$product->title}}</h5>
                                 <p class="card-text">{{$product->type->title}}</p>
