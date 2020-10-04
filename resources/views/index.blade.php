@@ -402,23 +402,23 @@
     <!-- Testimonial section end  -->
 
     <!-- Clients section  -->
-    <section class="clients-section spad">
-        <div class="container">
-            <div class="client-text">
-                <h2>Наши партнеры</h2>
-            </div>
-            <div class="single-brand d-inline-block">
-                <a href="http://www.1advance.ru/" class="site-logo">
-                    <img src="img/advlogo.png" target="_blank" alt="Адванс логотип">
-                </a>
-            </div>
-            <div class="single-brand d-inline-block">
-                <a href="#" class="site-logo">
-                    <img src="img/rmglogo.png" target="_blank" alt="РусМетГрупп логотип">
-                </a>
-            </div>
-        </div>
-    </section>
+{{--    <section class="clients-section spad">--}}
+{{--        <div class="container">--}}
+{{--            <div class="client-text">--}}
+{{--                <h2>Наши партнеры</h2>--}}
+{{--            </div>--}}
+{{--            <div class="single-brand d-inline-block">--}}
+{{--                <a href="http://www.1advance.ru/" class="site-logo">--}}
+{{--                    <img src="img/advlogo.png" target="_blank" alt="Адванс логотип">--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--            <div class="single-brand d-inline-block">--}}
+{{--                <a href="#" class="site-logo">--}}
+{{--                    <img src="img/rmglogo.png" target="_blank" alt="РусМетГрупп логотип">--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <!-- Clients section end  -->
 
 
