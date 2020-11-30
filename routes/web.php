@@ -12,6 +12,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'AdminController@index')->name('admin.index');
     Route::get('callbacks', 'AdminController@callbacks')->name('callbacks.index');
     Route::resource('products', 'ProductsController');
+    Route::resource('categories', 'CategoryController');
 
     Route::get('/phpinfo', function () {
         phpinfo();

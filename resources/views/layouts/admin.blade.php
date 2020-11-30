@@ -63,6 +63,10 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{route('categories.index')}}">
+                <span>Категории</span></a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{route('products.index')}}">
                 <span>Продукты</span></a>
         </li>

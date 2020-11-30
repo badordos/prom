@@ -32,7 +32,8 @@ class HomeController extends Controller
     public function index()
     {
         $title = 'Проминдустрия - производство и продажа металлоконструкций в Екатеринбурге.';
-        return view('index', compact('title'));
+        $types = Type::where('active', 1)->get();
+        return view('index', compact('title', 'types'));
     }
 
     public function catalog(Request $request)
@@ -94,7 +95,7 @@ class HomeController extends Controller
         $msg->message = $request->message;
         $msg->save();
 
-        Mail::to(env('ADMIN_MAIL'))->send(new CallbackMessage($request));
+        Mail::to(env('MAIN_MAIL'))->send(new CallbackMessage($request));
 
         return back()->with('message', 'Вы успешно отправили письмо.');
     }

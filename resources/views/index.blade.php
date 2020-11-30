@@ -43,123 +43,19 @@
         <div class="services-warp">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-item">
-                            <div class="si-head">
-                                <div class="si-icon">
-                                    <img src="img/icons/опора.png" alt="">
+                    @foreach($types as $type)
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <div class="si-head">
+                                    <div class="si-icon">
+                                        <img src="{{$type->image}}" alt="">
+                                    </div>
+                                    <h5>{{$type->title}}</h5>
                                 </div>
-                                <h5>Опоры освещения</h5>
+                                <p>{{$type->desc}}</p>
                             </div>
-                            <p>Металлические опоры освещения для благоустройства придомовых территорий, дорог, переходов
-                                и парковых зон.</p>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-item">
-                            <div class="si-head">
-                                <div class="si-icon">
-                                    <img src="img/icons/фундамент.png" alt="закладная деталь фундамента">
-                                </div>
-                                <h5>Фундаменты</h5>
-                            </div>
-                            <p>Закладные детали фундамента для опор освещения. Трубные, консольные, анкерные и выносные
-                                фундаменты.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-item">
-                            <div class="si-head">
-                                <div class="si-icon">
-                                    <img src="img/icons/кронштейн.png" alt="кронштейн освещения">
-                                </div>
-                                <h5>Кронштейны</h5>
-                            </div>
-                            <p>Кронштейны освещения устанавливаются на опоры освещения или на стены или другие
-                                проектируемые поверхности. </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-item">
-                            <div class="si-head">
-                                <div class="si-icon">
-                                    <img src="img/icons/свая.png" alt="свая винтовая">
-                                </div>
-                                <h5>Винтовые сваи</h5>
-                            </div>
-                            <p>Заглубляемые в грунт методом завинчивания в сочетании с вдавливанием сваи для
-                                промышленого и гражданского строительства.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="si-head">
-                                <div class="si-icon">
-                                    <img src="img/icons/токарные.png" alt="">
-                                </div>
-                                <h5>Токарно-фрезерные работы</h5>
-                            </div>
-                            <p>Изготовление деталей, инструмента и оснастки из стандартного перечня и по чертежам
-                                заказчика</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="si-head">
-                                <div class="si-icon">
-                                    <img src="img/icons/сетка.png" alt="">
-                                </div>
-                                <h5>Сварные арматурные сетки</h5>
-                            </div>
-                            <p>Предназначены для армирования железобетонных конструкций и увеличение прочности кирпичной
-                                кладки.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="si-head">
-                                <div class="si-icon">
-                                    <img src="img/icons/ограждение.png" alt="">
-                                </div>
-                                <h5>Перильные ограждения и отбойники</h5>
-                            </div>
-                            <p>Основная функция перильных ограждений – создание безопасной среды и защиты жизни и
-                                здоровья человека.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="si-head">
-                                <div class="si-icon">
-                                    <img src="img/icons/chertez.png" alt="">
-                                </div>
-                                <h5>По чертежам заказчика</h5>
-                            </div>
-                            <p>Мы можем поставить по вашим чертежам закладные детали, лестничные марши.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="si-head">
-                                <div class="si-icon">
-                                    <img src="img/icons/рмп.png" alt="">
-                                </div>
-                                <h5>Рамы РМП</h5>
-                            </div>
-                            <p>Рамы металлические, п-образные. Предназначены для установки дорожных знаков и указателей</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="si-head">
-                                <div class="si-icon">
-                                    <img src="img/icons/гобр.png" alt="">
-                                </div>
-                                <h5>Опоры светофорные</h5>
-                            </div>
-                            <p>Г-образные стальные опоры предзназначенные для установки светофоров и дорожных знаков.</p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -224,7 +120,8 @@
                                         Фундамент на винтовых сваях не требует сложного проектирования, применим к
                                         любому проекту здания, и может быть построен за 2 дня.
                                     </p>
-                                    <a href="{{route('catalog', ['type_id' => 4])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
+                                    <a href="{{route('catalog', ['type_id' => 4])}}"
+                                       class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +144,8 @@
                                         Токарно-фрезерные работы по металлу востребованы на любом предприятии
                                         машиностроения, производства металлоизделий или по ремонту и обслуживанию
                                         транспорта.</p>
-                                    <a href="{{route('catalog', ['type_id' => 9])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
+                                    <a href="{{route('catalog', ['type_id' => 9])}}"
+                                       class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -275,7 +173,8 @@
                                         промышленности, сельском хозяйстве. Сетка сварная удобна при крепеже, имеет
                                         низкий удельный вес. Изделия и конструкции с применением сварной сетки доступны
                                         по цене, легки в монтаже, безопасны в пользовании.</p>
-                                    <a href="{{route('catalog', ['type_id' => 5])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
+                                    <a href="{{route('catalog', ['type_id' => 5])}}"
+                                       class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -302,7 +201,8 @@
                                         препятствующих пересечению пешеходами дороги в неположенном месте.
                                         Дорожные ограждения барьерного типа — это элемент обеспечения пассивной
                                         безопасности автомобильных дорог.</p>
-                                    <a href="{{route('catalog', ['type_id' => 6])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
+                                    <a href="{{route('catalog', ['type_id' => 6])}}"
+                                       class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -332,7 +232,8 @@
                                         углом дорожных знаков, светосигнального оборудования, светофоров, приборов фото
                                         и видеофиксации, рекламных конструкций. Прямой угол крепления конструкций
                                         обеспечивает хороший обзор всем участникам движения.</p>
-                                    <a href="{{route('catalog', ['type_id' => 7])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
+                                    <a href="{{route('catalog', ['type_id' => 7])}}"
+                                       class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -356,7 +257,8 @@
                                         различных средств регулирования и организации движения на трассах, автострадах,
                                         прилегающей к дороге территории, подъездных путях, а также рядом с пешеходными
                                         переходами, которые не оборудованы специальными барьерными ограждениями. </p>
-                                    <a href="{{route('catalog', ['type_id' => 1])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
+                                    <a href="{{route('catalog', ['type_id' => 1])}}"
+                                       class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -389,7 +291,8 @@
                                         Haибoльшee pacпpocтpaнeниe пoлучили мeтaлличecкиe oпopы ocвeщeния. Иx cтoимocть
                                         и пpeимущecтвa cбaлaнcиpoвaны, a шиpoкий выбop пapaмeтpoв нe oгpaничивaeт
                                         вoзмoжнocти пpимeнeния.</p>
-                                    <a href="{{route('catalog', ['type_id' => 1])}}" class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
+                                    <a href="{{route('catalog', ['type_id' => 1])}}"
+                                       class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
                         </div>
@@ -402,23 +305,23 @@
     <!-- Testimonial section end  -->
 
     <!-- Clients section  -->
-{{--    <section class="clients-section spad">--}}
-{{--        <div class="container">--}}
-{{--            <div class="client-text">--}}
-{{--                <h2>Наши партнеры</h2>--}}
-{{--            </div>--}}
-{{--            <div class="single-brand d-inline-block">--}}
-{{--                <a href="http://www.1advance.ru/" class="site-logo">--}}
-{{--                    <img src="img/advlogo.png" target="_blank" alt="Адванс логотип">--}}
-{{--                </a>--}}
-{{--            </div>--}}
-{{--            <div class="single-brand d-inline-block">--}}
-{{--                <a href="#" class="site-logo">--}}
-{{--                    <img src="img/rmglogo.png" target="_blank" alt="РусМетГрупп логотип">--}}
-{{--                </a>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
+    {{--    <section class="clients-section spad">--}}
+    {{--        <div class="container">--}}
+    {{--            <div class="client-text">--}}
+    {{--                <h2>Наши партнеры</h2>--}}
+    {{--            </div>--}}
+    {{--            <div class="single-brand d-inline-block">--}}
+    {{--                <a href="http://www.1advance.ru/" class="site-logo">--}}
+    {{--                    <img src="img/advlogo.png" target="_blank" alt="Адванс логотип">--}}
+    {{--                </a>--}}
+    {{--            </div>--}}
+    {{--            <div class="single-brand d-inline-block">--}}
+    {{--                <a href="#" class="site-logo">--}}
+    {{--                    <img src="img/rmglogo.png" target="_blank" alt="РусМетГрупп логотип">--}}
+    {{--                </a>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
     <!-- Clients section end  -->
 
 
