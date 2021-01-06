@@ -32,7 +32,7 @@ class HomeController extends Controller
     public function index()
     {
         $title = 'Проминдустрия - производство и продажа металлоконструкций в Екатеринбурге.';
-        $types = Type::where('active', 1)->get();
+        $types = Type::where('active', 1)->get()->chunk(4);
         return view('index', compact('title', 'types'));
     }
 

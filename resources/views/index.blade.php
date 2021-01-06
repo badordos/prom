@@ -43,18 +43,25 @@
         <div class="services-warp">
             <div class="container">
                 <div class="row">
-                    @foreach($types as $type)
-                        <div class="col-lg-3 col-md-6">
-                            <div class="service-item">
-                                <div class="si-head">
-                                    <div class="si-icon">
-                                        <img src="{{$type->image}}" alt="">
+                    @foreach($types as $typesGroup)
+                        @foreach($typesGroup as $type)
+                            <div class="@if($typesGroup->count() == 4) col-lg-3
+                                        @elseif($typesGroup->count() == 3) col-lg-4
+                                        @elseif($typesGroup->count() == 2) col-lg-6
+                                        @else col-lg-12
+                                        @endif
+                                        col-md-6">
+                                <div class="service-item">
+                                    <div class="si-head">
+                                        <div class="si-icon">
+                                            <img src="{{$type->image}}" alt="">
+                                        </div>
+                                        <h5>{{$type->title}}</h5>
                                     </div>
-                                    <h5>{{$type->title}}</h5>
+                                    <p>{{$type->desc}}</p>
                                 </div>
-                                <p>{{$type->desc}}</p>
                             </div>
-                        </div>
+                        @endforeach
                     @endforeach
                 </div>
             </div>
