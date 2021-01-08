@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="contact-text">
-                        <h2>Оставить заявку</h2>
+                        <h1>Оставить заявку</h1>
                         <p>Воспользуйтесь формой связи и оставьте заявку по интересующему Вас вопросу. Наш менеджер свяжется с вами в самое ближайшее время!</p>
                         <div class="header-info-box">
                             <div class="hib-icon">
@@ -32,26 +32,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <form method="post" action="{{route('callback')}}" class="contact-form">
-                        @csrf
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" name="name" placeholder="Ваше имя" required>
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="email" name="email" placeholder="Ваша почта" required>
-                            </div>
-                            <div class="col-lg-4">
-                            </div>
-                            <div class="col-lg-12">
-                                <input type="text" name="subject" placeholder="Заголовок" required>
-                                <textarea class="text-msg" placeholder="Сообщение" name="message" required></textarea>
-                                {!! app('captcha')->display() !!}
-                                <button class="site-btn" type="submit">Отправить</button>
-                            </div>
-
-                        </div>
-                    </form>
+                   @include('components.callbackForm')
                 </div>
             </div>
         </div>

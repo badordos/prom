@@ -43,20 +43,21 @@
         <div class="services-warp">
             <div class="container">
                 <div class="row">
-                    @foreach($types as $typesGroup)
+                    @foreach($typesGroups as $typesGroup)
                         @foreach($typesGroup as $type)
                             <div class="@if($typesGroup->count() == 4) col-lg-3
                                         @elseif($typesGroup->count() == 3) col-lg-4
                                         @elseif($typesGroup->count() == 2) col-lg-6
                                         @else col-lg-12
                                         @endif
-                                        col-md-6">
+                                col-md-6">
                                 <div class="service-item">
                                     <div class="si-head">
                                         <div class="si-icon">
-                                            <img src="{{$type->image}}" alt="">
+                                            <a href="{{route('catalog', $type)}}"><img src="{{$type->image}}"
+                                                                                       alt=""></a>
                                         </div>
-                                        <h5>{{$type->title}}</h5>
+                                        <a class="btn-link" href="{{route('catalog', $type)}}"><h5>{{$type->title}}</h5></a>
                                     </div>
                                     <p>{{$type->desc}}</p>
                                 </div>
@@ -109,6 +110,40 @@
     <!-- Features section end  -->
 
     <!-- Testimonial section -->
+{{--    @foreach($types as $type)--}}
+{{--        <section class="testimonial-section">--}}
+{{--            <div class="container-fluid">--}}
+{{--                <div class="row">--}}
+{{--                    @if(($loop->iteration % 2) == 0)--}}
+{{--                    <div class="col-lg-6 p-0">--}}
+{{--                        <div class="testimonial-bg set-bg" data-setbg="{{$type->big_image}}"></div>--}}
+{{--                    </div>--}}
+{{--                    @endif--}}
+{{--                    <div class="col-lg-6 p-0">--}}
+{{--                        <div class="testimonial-box">--}}
+{{--                            <div class="testi-box-warp">--}}
+{{--                                <h2>{{$type->title}}</h2>--}}
+{{--                                <div>--}}
+{{--                                    <div class="testimonial">--}}
+{{--                                        <p>{{$type->desc}}--}}
+{{--                                        </p>--}}
+{{--                                        <a href="{{route('catalog', $type)}}"--}}
+{{--                                           class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                        @if(($loop->iteration % 2) != 0)--}}
+{{--                            <div class="col-lg-6 p-0">--}}
+{{--                                <div class="testimonial-bg set-bg" data-setbg="{{$type->big_image}}"></div>--}}
+{{--                            </div>--}}
+{{--                        @endif--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </section>--}}
+{{--    @endforeach--}}
+
     <section class="testimonial-section">
         <div class="container-fluid">
             <div class="row">
@@ -127,7 +162,7 @@
                                         Фундамент на винтовых сваях не требует сложного проектирования, применим к
                                         любому проекту здания, и может быть построен за 2 дня.
                                     </p>
-                                    <a href="{{route('catalog', ['type_id' => 4])}}"
+                                    <a href="{{route('catalog', $types->where('title', 'Винтовые сваи')->first())}}"
                                        class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>
@@ -151,7 +186,7 @@
                                         Токарно-фрезерные работы по металлу востребованы на любом предприятии
                                         машиностроения, производства металлоизделий или по ремонту и обслуживанию
                                         транспорта.</p>
-                                    <a href="{{route('catalog', ['type_id' => 9])}}"
+                                    <a href="{{route('catalog', $types->where('title', 'Токарно-фрезерные работы')->first())}}"
                                        class="site-btn sb-white mr-4 mb-3">Посмотреть в каталоге</a>
                                 </div>
                             </div>

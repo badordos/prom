@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Industry.INC HTML Template">
-    <meta name="keywords" content="industry, html">
+    <meta name="description" content="{{$desc ?? 'Проминдустрия - производство и продажа металлоконструкций в Екатеринбурге'}}">
+    <meta name="keywords" content="{{$desc ?? 'Проминдустрия - производство и продажа металлоконструкций в Екатеринбурге'}}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <meta name="yandex-verification" content="d03d1b16cb3590a4" />
+    <meta name="yandex-verification" content="{{env('YANDEX_VERIFY')}}" />
 
     <title>{{ $title ?? config('app.name', 'Laravel') }}</title>
 

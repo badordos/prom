@@ -78,6 +78,10 @@
             <a class="nav-link" href="{{route('phpinfo')}}">
                 <span>PHP info</span></a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('sitemap')}}">
+                <span>SiteMap</span></a>
+        </li>
     </ul>
 
     <div id="content-wrapper">

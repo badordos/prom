@@ -3,21 +3,23 @@
 @section('content')
 
     <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-6 col-sm-12">
+                <div class="blog-post">
+                    <h1>{{$product->title}}</h1>
+                    <div class="blog-thumb set-bg" data-setbg="{{$image = $product->getFirstMedia('image') ? $image->getUrl() : '/img/about.jpg'}}">
+                    </div>
+                    <h2>{{$product->short_desc}}</h2>
+                    <p>{{$product->desc}}</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
 
-        <div class="card text-center">
-            <div class="card-header">
-                <h2>{{$product->title}}</h2>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">{{$product->short_desc}}</h5>
-                <p class="card-text">{{$product->desc}}</p>
-                <a href="tel:+79923322268" class="site-btn btn-sm btn-success"><i class="fas fa-phone-square"></i> Заказать</a>
-            </div>
-            <img class="card-img-bottom" src="{{$product->getFirstMedia('image')->getUrl()}}" alt="{{$product->short_desc}}">
-            <div class="card-footer text-muted">
-                <a href="{{route('catalog')}}" class="btn btn-sm btn-danger">Назад к каталогу</a>
+                @include('components.callbackForm')
+
             </div>
         </div>
+
     </div>
 
 @endsection

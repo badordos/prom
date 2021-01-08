@@ -16,7 +16,9 @@ class AddActiveAndDescAttributeInTypes extends Migration
         Schema::table('types', function (Blueprint $table) {
             $table->boolean('active')->default(0)->comment('включен/выключен');
             $table->string('desc')->nullable()->comment('описание');
+            $table->string('slug');
             $table->string('image')->nullable()->comment('путь к изображению');
+            $table->string('big_image')->nullable()->comment('путь к изображению');
         });
     }
 

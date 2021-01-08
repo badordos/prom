@@ -2,10 +2,11 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-//Route::get('/about', 'HomeController@about')->name('about');
+//Route::get('/blog', 'HomeController@blog')->name('blog');
 Route::get('/contact', 'HomeController@contact')->name('contact');
-Route::get('/catalog', 'HomeController@catalog')->name('catalog');
-Route::get('/catalog/{product}', 'HomeController@show')->name('product');
+Route::get('/catalog/{type?}', 'HomeController@catalog')->name('catalog');
+Route::get('/search', 'HomeController@search')->name('search');
+Route::get('/catalog/{type}/{product}', 'HomeController@show')->name('product');
 Route::post('/callback', 'HomeController@callback')->name('callback');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
@@ -17,5 +18,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/phpinfo', function () {
         phpinfo();
     })->name('phpinfo');
+    Route::get('/generateSiteMap', function () {
+        \Spatie\Sitemap\SitemapGenerator::create(env('APP_URL'))->getSitemap()->writeToFile(public_path('/sitemap.xml'));
+        return back();
+    })->name('sitemap');
 });
 

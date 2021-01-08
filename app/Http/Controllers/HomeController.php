@@ -32,13 +32,32 @@ class HomeController extends Controller
     public function index()
     {
         $title = 'Проминдустрия - производство и продажа металлоконструкций в Екатеринбурге.';
-        $types = Type::where('active', 1)->get()->chunk(4);
-        return view('index', compact('title', 'types'));
+        $desc = 'Проминдустрия - производство и продажа металлоконструкций в Екатеринбурге.';
+        $types = Type::where('active', 1)->get();
+        $typesGroups = $types->chunk(4);
+        return view('index', compact('title', 'types', 'typesGroups', 'desc'));
     }
 
-    public function catalog(Request $request)
+    public function catalog(Type $type = null)
     {
         $title = 'Каталог продукции ООО "ПРОМИНДУСТРИЯ"';
+
+        $products = collect();
+        $desc = null;
+        if ($type) {
+            $products = Product::orderBy('created_at')
+                ->where('type_id', $type->id)
+                ->get();
+            $desc = $type->desc;
+        }
+
+        $types = Type::where('active', 1)->get();
+        return view('catalog', compact('types', 'type', 'products', 'title', 'desc'));
+    }
+
+    public function search(Request $request)
+    {
+        $title = 'Поиск по каталогу продукции ООО "ПРОМИНДУСТРИЯ"';
 
         if (isset($request->title)) {
             $products = Product::query()
@@ -57,7 +76,7 @@ class HomeController extends Controller
 
         $products = $products->paginate(12);
         $types = Type::all();
-        return view('catalog', [
+        return view('search', [
             'products' => $products->appends(Input::except('page')),
             'types' => $types,
             'title' => $title,
@@ -65,10 +84,11 @@ class HomeController extends Controller
     }
 
 
-    public function show(Product $product)
+    public function show(Type $type, Product $product)
     {
         $title = $product->title;
-        return view('product', compact('product', 'title'));
+        $desc = $product->title;
+        return view('product', compact('product', 'title', 'desc', 'type'));
     }
 
     public function about()
@@ -78,8 +98,8 @@ class HomeController extends Controller
 
     public function contact()
     {
-        $title = 'Оставить заявку в Проминдустрия Екатеринбург';
-        return view('contact', compact('title'));
+        $title = $desc = 'Оставить заявку в ООО "Проминдустрия" Екатеринбург';
+        return view('contact', compact('title', 'desc'));
     }
 
     public function callback(Request $request)
