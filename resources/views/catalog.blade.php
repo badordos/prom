@@ -46,12 +46,13 @@
                             <div class="row">
                                 @forelse($products as $product)
 
-
-
                                     <div class="card col-lg-3 col-md-4 col-sm-9 mr-5 mt-3">
                                         <img class="card-img-top img-fluid img-thumbnail"
                                              style="width: 350px ; height: 350px"
-                                             src="{{$image = $product->getFirstMedia('image') ? $image->getUrl() : '/img/about.jpg'}}"
+                                             @php
+                                                 $image = $product->getFirstMedia('image')
+                                             @endphp
+                                             src="{{$image ? $image->getUrl() : '/img/about.jpg'}}"
                                              alt="{{$product->short_desc}}"
                                              loading="lazy">
                                         <div class="card-body">
