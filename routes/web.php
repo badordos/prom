@@ -19,7 +19,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
         phpinfo();
     })->name('phpinfo');
     Route::get('/generateSiteMap', function () {
-        \Spatie\Sitemap\SitemapGenerator::create(env('APP_URL'))->getSitemap()->writeToFile(public_path('/sitemap.xml'));
+        \Spatie\Sitemap\SitemapGenerator::create('https://prom-ekb.ru/')->getSitemap()->writeToFile(public_path('/sitemap.xml'));
         return back();
     })->name('sitemap');
 });
